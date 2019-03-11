@@ -1,5 +1,5 @@
 module.exports = {
-	title: "CFP Vote Service",
+	title: "JSConf Bp CFP Vote 2019",
 	cfp_fields: [
 		"Presentation title",
 		"Presentation summary to be displayed on the website",
@@ -11,7 +11,7 @@ module.exports = {
 		},
 		'stage_2': {
 			label: 'Shortlisting Round',
-			include_votes_top: 4
+			include_votes_top: 60
 		}
 	},
 	voting_ui: {
