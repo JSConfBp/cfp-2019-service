@@ -6,17 +6,16 @@ const talk = require('./talk')
 const vote = require('./vote')
 const download = require('./download')
 
-exports.register = async function (server, options) {
+exports.register = async function (server) {
   const basePath = process.env.SERVICE_BASEPATH || ''
 
-  return await server.register([client, token, cfp, stats, talk, vote, download], {
+  const registered = await server.register([client, token, cfp, stats, talk, vote, download], {
     routes: {
       prefix: basePath + '/v1'
     }
   })
 
-  //server.route(require('./status/read'))
+  return registered
 }
 
 exports.name = 'http-routes'
-

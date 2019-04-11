@@ -24,18 +24,18 @@ module.exports = function (schema, field) {
           throw Boom.badRequest()
         }
       }
-	}
+    }
 
-	let err = null
+    let err = null
 
-	try {
-		err = (new Ajv()).validate(schemaPath, input)
-	} catch (e) {
-		err = e
-	}
+    try {
+      err = (new Ajv()).validate(schemaPath, input)
+    } catch (e) {
+      err = e
+    }
 
-	if (err) throw Boom.badRequest()
+    if (err) throw Boom.badRequest()
 
-	return value
+    return value
   }
 }

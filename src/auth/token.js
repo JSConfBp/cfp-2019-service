@@ -36,7 +36,6 @@ const decode = function (token) {
  * @return {*}
  */
 const validate = function (token, secret) {
-
   const payload = decode(token)
 
   if (!hasAllMandatoryClaims(payload)) {

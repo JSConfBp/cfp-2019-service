@@ -1,5 +1,4 @@
 exports.register = async function (server, options) {
-
   server.auth.scheme('jwt', require('../../auth/jwt-scheme'))
   server.auth.strategy('jwt', 'jwt')
 

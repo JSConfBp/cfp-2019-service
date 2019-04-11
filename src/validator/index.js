@@ -1,5 +1,4 @@
 module.exports = function (validators) {
-
   return async function (value, options) {
     let clonedValidators = [...validators]
 
@@ -11,7 +10,7 @@ module.exports = function (validators) {
       let validator = clonedValidators.shift()
 
       if (validator !== undefined) {
-        return await validator(value, options, validate)
+        return validator(value, options, validate)
       }
 
       return null

@@ -11,6 +11,7 @@ services:
     working_dir: /usr/src/app
     command: ["npx", "nodemon", "index.js"]
     environment:
+      - NODE_ENV=development
       - PORT=4000
       - REDIS_URL=redis
 

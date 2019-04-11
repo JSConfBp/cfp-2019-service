@@ -1,4 +1,4 @@
 module.exports = {
-	read: require('./read'),
-	histogram: require('./histogram'),
+  read: require('./read'),
+  histogram: require('./histogram')
 }
